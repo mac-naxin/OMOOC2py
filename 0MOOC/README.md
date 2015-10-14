@@ -7,6 +7,13 @@
 - MacBook pro  以前总想好好学下，拖到现在。
 - OS X El Capitan 升级到最新
 
-### 软件环境
--
+### 软件工具
+- Homebrew
+- Homebrew cask
+- Sublime Text build 3083
+- DASH
+- ITEM2
+- MacDown
+- Git
+- 
 

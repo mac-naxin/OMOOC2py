@@ -5,4 +5,4 @@
 提供:
 
 - 在Mac环境下，学习Python时所遇到的问题及解决办法。
-- 对编程就是一种表达的理解和思考，对dama这个观点，can't agree more. 
+- 对编程就是一种表达的理解和思考，这是dama提出的观点，can't agree more. 

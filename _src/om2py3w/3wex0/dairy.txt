@@ -1,0 +1,21 @@
+test 001
+test 002
+能输入中文吗
+能读吗
+输入read 无效啊
+oh , 我又来来
+这回试一下 read
+again
+agian
+try read
+print
+了，yeah！
+可以读了
+
+something strand 
+有文的
+有关没有了
+ read
+ok
+exirt
+exirt

@@ -12,26 +12,27 @@ server_address = ('localhost', 10000)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 sock.bind(server_address)
 
-def write(target):
-	line = data
-	target.write(line + '\n')
+def write(data):
+	target = open('dairy.txt', 'a')
+	target.write(data + '\n')
+	target.close()
+
+	
+	
 		
 
 while  True:
-	print >>sys.stderr, '\nwaiting to receive message'
+	
 	data, address = sock.recvfrom(4096)
 
-	if data = read:  # 返回日记文件
-		
+	if data == "read":  # 返回日记文件， 无效的why
+		print >>sys.stderr, '\nwaiting to read dairy'
 		target = open('dairy.txt')
 		record = target.read()
 		sock.sendto(record, address)
 		target.close()
 
-		print >>sys.stderr, 'sent %s bytes back to %s' % (sent, address)
+#		print >>sys.stderr, 'sent %s bytes back to %s' % (sent, address)
 	else:            # 把data写入日记
-		target = open('dairy.txt', 'a')
-		write(target)
-		target.close()
+		write(data)   # 把data 传入write函数中执行
 
-    

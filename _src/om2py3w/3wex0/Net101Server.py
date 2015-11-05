@@ -8,7 +8,7 @@ import sys
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server_address = ('localhost', 10000)
+server_address = ('0.0.0.0', 10000)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 sock.bind(server_address)
 
@@ -34,5 +34,8 @@ while  True:
 
 #		print >>sys.stderr, 'sent %s bytes back to %s' % (sent, address)
 	else:            # 把data写入日记
+		print >>sys.stderr, '\nwaiting to write dairy'
 		write(data)   # 把data 传入write函数中执行
+		sock.sendto('日记已保存', address)
+		print >>sys.stderr, data + '——这条日记已写入\n'
 

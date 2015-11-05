@@ -3,25 +3,22 @@ import socket
 import sys
 from sys import argv
 
-script, writeread = argv
-
 # Create a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+print "请输入服务器地址："
+sdb = raw_input('> ')
+# server_address = ('localhost', 10000)
+server_address = (sdb, 10000)
 
-server_address = ('localhost', 10000)
-
-# 发送 read给服务器， 请求返回日记
-# 脚本附加 write 参数 , 代表写日记， 否则，发送read 
-# 输入日记，发送给服务器端
-
-print "输入一行日记，输入exit，否则退出日记"
+print "请输入一行日记，如输入exit，退出日记，如输入read, 则打印日记"
 				
 line = raw_input('> ')
 
 while line <> 'exit':   # 输入不是exit，则执行写日记功能
 	if line <> 'read':   # 把日记内容发给服务器
 		sent = sock.sendto(line, server_address)
-		print "日记已保存"
+		data, server = sock.recvfrom(4096)
+		print data
 		line = raw_input('> ')
  
 	else: # 发送 read ，接收并显示日记内容 
